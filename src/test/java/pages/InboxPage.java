@@ -21,8 +21,10 @@ public class InboxPage extends BasePage {
         driver.findElement(primaryTab).isDisplayed();
     }
 
-    public void clickContacts() {
-        driver.findElement(contactButton).click();
+    public void openContacts() {
+        if (driver.findElements(contactFrame).size() == 0) {
+            driver.findElement(contactButton).click();
+        }
     }
 
     public List<String> getAllContactsName() {
