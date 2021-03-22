@@ -17,8 +17,8 @@ public class InboxPage extends BasePage {
         BasePage.driver = driver;
     }
 
-    public void isPrimaryTabAvailable() {
-        driver.findElement(primaryTab).isDisplayed();
+    public boolean isPrimaryTabAvailable() {
+        return driver.findElement(primaryTab).isDisplayed();
     }
 
     public void openContacts() {
