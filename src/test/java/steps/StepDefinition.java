@@ -118,6 +118,8 @@ public class StepDefinition extends BaseStep {
     @Given("contacts should contain list of users")
     public void contacts_should_contain_list_of_users(DataTable expectedContactsList) {
         Assert.assertEquals(inboxPage.getAllContactsName(), expectedContactsList.asList(), "Contacts retrieved are not same as the contacts expected");
+        // TODO Ideally it should be in Cucumber Hook: @After
+        driver.quit();
     }
 }
 
